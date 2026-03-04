@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffd900",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .portfolio-card-shadow {
+            box-shadow: 0 4px 20px -5px rgba(255, 217, 0, 0.1);
+        }
+        .portfolio-card-shadow:hover {
+            box-shadow: 0 10px 30px -5px rgba(255, 217, 0, 0.2);
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom, #ffd900, #b8860b) 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-5 bg-background-light dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-100">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold leading-tight tracking-tight uppercase">Portfolio</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-12 items-center">
+<nav class="flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#home">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-background-dark text-sm font-bold tracking-wider hover:bg-white transition-all shadow-lg shadow-primary/20">
+                        Hire Me
+                    </button>
+</div>
+</header>
+<main class="flex flex-col flex-1 max-w-7xl mx-auto w-full px-6 py-12">
+<section class="mb-24" id="skills">
+<div class="flex flex-col items-center mb-16">
+<span class="text-primary text-sm font-bold tracking-[0.3em] uppercase mb-4">Expertise</span>
+<h2 class="text-4xl md:text-5xl font-black text-center">Technical Expertise</h2>
+<div class="w-20 h-1 bg-primary mt-6 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="portfolio-card-shadow flex flex-col gap-6 rounded-xl border border-primary/20 bg-background-light dark:bg-black p-8 transition-all">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">code</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100">Frontend Development</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Crafting immersive digital experiences with modern web technologies and pixel-perfect attention to detail.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">React.js</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Next.js</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">TypeScript</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Data Structures</span>
+</div>
+</div>
+</div>
+<div class="portfolio-card-shadow flex flex-col gap-6 rounded-xl border border-primary/20 bg-background-light dark:bg-black p-8 transition-all">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100">Backend Systems</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Architecting scalable server-side solutions and robust API architectures for complex enterprise needs.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Node.js</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">PostgreSQL</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">GraphQL</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Algorithms</span>
+</div>
+</div>
+</div>
+<div class="portfolio-card-shadow flex flex-col gap-6 rounded-xl border border-primary/20 bg-background-light dark:bg-black p-8 transition-all">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">construction</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100">Development Tools</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Utilizing premium industry-standard tools to streamline development, deployment and design workflow.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Docker</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">AWS</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Figma</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary">Git</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-24" id="projects">
+<div class="flex flex-col items-center mb-16">
+<span class="text-primary text-sm font-bold tracking-[0.3em] uppercase mb-4">Portfolio</span>
+<h2 class="text-4xl md:text-5xl font-black text-center">Major Projects</h2>
+<div class="w-20 h-1 bg-primary mt-6 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="flex flex-col bg-background-light dark:bg-black/40 rounded-xl overflow-hidden border border-slate-200 dark:border-white/5 relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="aspect-video w-full overflow-hidden bg-slate-800">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110 opacity-70" data-alt="Dark analytical dashboard with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiBsZVMCNHW_05-DYCzUYfapveCS4aXuRDtwsQaTJ7rCYxJQ8fQJR9_ZorNhK0VJalZkxPqvLBg9OkCXEEumAbjcc7L2Yf_X1B5OMz5nM3oGnFj_sUvb4OwwtNJqckjkIg69nwQOGNAHbDplYs3Wb4Js05S2oPPjOL4qF-CwrAOIsC_eLh7YDPsonh9dAn7lrTYwGduqXanAd0e5iJ6sc61nh4Mb6hBC5NvmkX9mb9PonTmJJ4TuRjCP6Jy2IA3xOLLA2OgQQmvzGb"/>
+</div>
+<div class="p-8 flex flex-col grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">Next.js</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">Postgres</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-primary">University Data Lab Project</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">A high-performance research initiative focused on processing large-scale academic datasets with sub-second latency.</p>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<button class="flex items-center justify-center gap-2 h-10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all rounded">
+<span class="material-symbols-outlined text-sm">code</span> GitHub
+                                    </button>
+<button class="flex items-center justify-center gap-2 h-10 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all rounded">
+<span class="material-symbols-outlined text-sm">open_in_new</span> Live Demo
+                                    </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-background-light dark:bg-black/40 rounded-xl overflow-hidden border border-slate-200 dark:border-white/5 relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="aspect-video w-full overflow-hidden bg-slate-800">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110 opacity-70" data-alt="Elegant ecommerce mobile application layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2pfOIx_MJCtaH2tNP7zGJ1mnE6LQNSehu7Mz6QnSn_TpqIKAX5hwHfinO97CyfvJNFV5KIV7ov6ggA7uF61GduIk7ZqtNj3S78mnFYpFh-KXHZHnG8f3DXnYbRqWvEM6URX3uiCqMdv-B6BVnNW3UTnkte_dgRfYRu68_3esCstulMdrKiY04U_w0O9aS76MnsCjRwk4HseuRKST9M4-tItHDdqWblHXpO7kI4DdXU0dpbU913Tcwwo0EjLhWbfLK7zwT7r3LFNbm"/>
+</div>
+<div class="p-8 flex flex-col grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">React Native</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">Stripe</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-primary">Aura E-Commerce</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">Portfolio shopping experience with biometric authentication and AI-driven curation.</p>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<button class="flex items-center justify-center gap-2 h-10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all rounded">
+<span class="material-symbols-outlined text-sm">code</span> GitHub
+                                    </button>
+<button class="flex items-center justify-center gap-2 h-10 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all rounded">
+<span class="material-symbols-outlined text-sm">open_in_new</span> Live Demo
+                                    </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-background-light dark:bg-black/40 rounded-xl overflow-hidden border border-slate-200 dark:border-white/5 relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="aspect-video w-full overflow-hidden bg-slate-800">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110 opacity-70" data-alt="Abstract global network connection visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMGgwVRTDcn8WRZUiQpJYBIvZgMWzXbGXhBhyhOytnquQHA5AvbYTGtwxE6rFTB8pFnkmG1Kcj5YhTnZRO0LIS3DnWBDB2Bd0w2xY0LxsIzAOXFvIu7_LU7xUKYsh6cNyf5zxwdST2bmACzd_4o8dFvpy7un09j4oe4hwZWfNr3Pe_hufJZaKYqRIj0EpoHBeZwCOeGCvVrLXqOGO7R86gj-TyJBpLUMtNmwD3pj8783AMd7A3f8G6jzCXXRyjd1KVGRWUvcV5NT7t"/>
+</div>
+<div class="p-8 flex flex-col grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">Three.js</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">Web-GL</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-primary">Zenith Core</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">Interactive 3D visualization engine for complex spatial datasets.</p>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<button class="flex items-center justify-center gap-2 h-10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all rounded">
+<span class="material-symbols-outlined text-sm">code</span> GitHub
+                                    </button>
+<button class="flex items-center justify-center gap-2 h-10 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all rounded">
+<span class="material-symbols-outlined text-sm">open_in_new</span> Live Demo
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="mt-auto border-t border-primary/10 py-12 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-3">
+<div class="size-4 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-sm font-bold uppercase tracking-widest">Portfolio</span>
+</div>
+<div class="text-xs tracking-widest uppercase">© 2024 All Rights Reserved. Crafted with Excellence.</div>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</body></html>

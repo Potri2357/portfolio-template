@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffd900",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0B0B0B;
+        }
+        .portfolio-gradient {
+            background: linear-gradient(135deg, #ffd900 0%, #b89b00 100%);
+        }
+        .form-input-focus:focus {
+            border-color: #ffd900 !important;
+            box-shadow: 0 0 0 1px #ffd900;
+        }
+        .social-icon {
+            transition: transform 0.2s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col bg-background-dark overflow-x-hidden">
+<main class="layout-container flex h-full grow flex-col">
+<section class="flex flex-1 justify-center items-center py-20 px-6">
+<div class="layout-content-container flex flex-col max-w-[600px] w-full gap-8">
+<div class="flex flex-col items-center text-center gap-3">
+<span class="text-primary text-sm font-bold tracking-[0.3em] uppercase">Inquiries</span>
+<h2 class="text-slate-100 text-4xl md:text-5xl font-extrabold tracking-tight">Let's Create Together</h2>
+<p class="text-slate-400 text-lg max-w-md">Open to internship and full-time opportunities.</p>
+</div>
+<div class="bg-zinc-900/50 p-8 rounded-xl border border-zinc-800 shadow-2xl">
+<form class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-zinc-400 text-xs font-bold uppercase tracking-widest px-1">Full Name</label>
+<input class="form-input flex w-full rounded-lg text-slate-100 border border-zinc-800 bg-black form-input-focus h-14 placeholder:text-zinc-600 p-4 text-base font-normal outline-none transition-all" placeholder="Alexander Sterling" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-zinc-400 text-xs font-bold uppercase tracking-widest px-1">Email Address</label>
+<input class="form-input flex w-full rounded-lg text-slate-100 border border-zinc-800 bg-black form-input-focus h-14 placeholder:text-zinc-600 p-4 text-base font-normal outline-none transition-all" placeholder="alex@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-zinc-400 text-xs font-bold uppercase tracking-widest px-1">Message</label>
+<textarea class="form-input flex w-full rounded-lg text-slate-100 border border-zinc-800 bg-black form-input-focus min-h-[160px] placeholder:text-zinc-600 p-4 text-base font-normal outline-none transition-all resize-none" placeholder="Tell me about your project..."></textarea>
+</div>
+<button class="portfolio-gradient text-black flex items-center justify-center rounded-lg h-14 px-8 w-full font-bold text-lg tracking-wide hover:opacity-90 transition-opacity" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+<div class="flex flex-col items-center gap-6 mt-4">
+<div class="flex flex-col md:flex-row items-center gap-6 mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">phone_iphone</span>
+<span class="text-zinc-400 text-sm font-medium tracking-wide">+1 (555) 012-3456</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span class="text-zinc-400 text-sm font-medium tracking-wide">Manhattan, New York</span>
+</div>
+</div><div class="flex items-center gap-8">
+<a class="social-icon group flex flex-col items-center gap-2" href="mailto:hello.alexander@university.edu">
+<div class="w-12 h-12 rounded-full border border-zinc-800 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">alternate_email</span>
+</div>
+<span class="text-[10px] text-zinc-500 font-bold uppercase tracking-tighter">Email</span>
+</a>
+<a class="social-icon group flex flex-col items-center gap-2" href="https://linkedin.com/in/alexanderblack">
+<div class="w-12 h-12 rounded-full border border-zinc-800 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">link</span>
+</div>
+<span class="text-[10px] text-zinc-500 font-bold uppercase tracking-tighter">LinkedIn</span>
+</a>
+<a class="social-icon group flex flex-col items-center gap-2" href="https://github.com/alexanderblack">
+<div class="w-12 h-12 rounded-full border border-zinc-800 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">code</span>
+</div>
+<span class="text-[10px] text-zinc-500 font-bold uppercase tracking-tighter">GitHub</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full border-t border-primary/20 bg-black py-12 px-6 mt-auto">
+<div class="max-w-[1200px] mx-auto flex flex-col items-center justify-center gap-6">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+<span class="text-black font-extrabold text-xl">L</span>
+</div>
+<span class="text-white font-bold tracking-widest text-lg uppercase">PORTFOLIO</span>
+</div>
+<div class="flex gap-8 text-xs font-medium text-zinc-500 uppercase tracking-[0.2em]"><a class="hover:text-primary transition-colors" href="#">Work</a>
+<a class="hover:text-primary transition-colors" href="#">Studio</a>
+<a class="hover:text-primary transition-colors" href="#">Journal</a>
+<a class="hover:text-primary transition-colors text-primary" href="mailto:hello.alexander@university.edu">Contact</a></div>
+<p class="text-primary text-[11px] font-bold tracking-[0.4em] uppercase opacity-80 text-center">
+                    © 2024 DESIGNED BY PORTFOLIO STUDIO • ALL RIGHTS RESERVED
+                </p>
+</div>
+</footer>
+</div>
+</body></html>

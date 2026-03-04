@@ -1,70 +1,225 @@
-# Getting Started with Create React App
+# ✦ Portfolio
+> A premium, dark-themed personal portfolio built with **React** · **Tailwind CDN** · **Playfair Display** & **Montserrat** fonts · Gold gradient design system.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🖥️ Preview
 
-In the project directory, you can run:
+| Section | Description |
+|---|---|
+| **Hero** | Full-screen animated intro with floating gold particles & scroll indicator |
+| **About** | Two-column layout with portrait, gold stats, and animated reveals |
+| **Expertise** | Three skill cards with icon hover, gold top-border slide, and tech tags |
+| **Portfolio** | Project grid with image zoom, overlay CTA on hover |
+| **Contact** | Split layout — info cards + animated floating-label form |
+| **Footer** | Social icon buttons with gold hover lift |
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Quick Start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+| Tool | Minimum Version |
+|---|---|
+| **Node.js** | v16.x or later |
+| **npm** | v8.x or later |
+| **Git** | Any recent version |
 
-### `npm test`
+### 1 · Clone the repository
+```bash
+git clone https://github.com/YOUR_USERNAME/portfolio.git
+cd portfolio
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2 · Install dependencies
+```bash
+npm install
+```
 
-### `npm run build`
+### 3 · Start development server
+```bash
+npm start
+```
+Open **http://localhost:3000** in your browser. Hot-reload is enabled — any saved change reflects instantly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4 · Build for production
+```bash
+npm run build
+```
+The optimised output lands in `build/`. Serve it with any static host.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+portfolio/
+├── public/
+│   ├── index.html          ← HTML shell (Tailwind CDN + Google Fonts injected here)
+│   └── resume.pdf          ← ⬅ PLACE YOUR RESUME HERE (see §Resumé below)
+│
+├── src/
+│   ├── App.js              ← All React components & page sections
+│   ├── App.css             ← Full premium design system (animations, layout, components)
+│   ├── index.js            ← React root entry-point
+│   └── index.css           ← Minimal global reset (keep empty or minimal)
+│
+├── full_page.html          ← Original Stitch reference (screens merged — full page)
+├── hero.html               ← Original Stitch screen: Hero & About
+├── skills.html             ← Original Stitch screen: Skills & Projects
+├── contact.html            ← Original Stitch screen: Contact
+│
+├── full_page.png           ← Screenshot: full page
+├── hero.png                ← Screenshot: hero section
+├── skills.png              ← Screenshot: skills section
+├── contact.png             ← Screenshot: contact section
+│
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📄 Resume Download
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The **"Download Resume"** button in the Hero section links to `/resume.pdf`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**To add your resume:**
 
-## Learn More
+1. Export your CV as a PDF file.
+2. Rename it exactly to `resume.pdf`.
+3. Place it inside the `public/` folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+portfolio/
+└── public/
+    └── resume.pdf   ✅  ← here
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The React build automatically copies everything in `public/` to the build output root, so `/resume.pdf` will be accessible in production too.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ✏️ Personalisation Guide
 
-### Analyzing the Bundle Size
+All personal content lives in **`src/App.js`**. Here is every field you need to replace:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 👤 Identity
 
-### Making a Progressive Web App
+| Location in App.js | Placeholder | Replace with |
+|---|---|---|
+| Navbar logo | `AB` | Your initials |
+| Hero tagline | `Software Engineering Student & Aspiring Architect · New York` | Your title & city |
+| Hero `<h1>` | `Alexander Black` | Your full name |
+| Hero subtitle | `Crafting bespoke digital experiences…` | Your personal pitch |
+| About `<h2>` + italic | `Driven Academic` / `Excellence` | Your own headline |
+| About sub-label | `Top 5% of Software Engineering Class` | Your own achievement |
+| About paragraph 1 & 2 | Full sentences | Your bio |
+| Portrait badge | `4.0 GPA` | Any key stat |
+| Stat card 1 | `Fortune 500` / `Internship Experience` | Your achievement |
+| Stat card 2 | `Dean's List` / `Academic Excellence & Open Source` | Your achievement |
+| Footer name | `Alexander Black` | Your full name |
+| Footer copyright | `© 2024 Alexander Black` | Your name & year |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 📞 Contact Details (`ContactRow` values)
 
-### Advanced Configuration
+| Field | Current placeholder | Replace with |
+|---|---|---|
+| Email `value` | `alexander.black@portfolio.com` | Your real email |
+| Email `href` | `mailto:alexander.black@portfolio.com` | `mailto:YOUR@EMAIL` |
+| Location `value` | `New York, USA` | Your city/country |
+| LinkedIn `value` & `href` | `linkedin.com/in/alexanderblack` | Your LinkedIn URL |
+| GitHub `value` & `href` | `github.com/alexanderblack` | Your GitHub URL |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🌐 Social Links (Footer)
 
-### Deployment
+In the `footer-social` array near the bottom of `App.js`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```js
+{ label: 'LI', href: 'https://linkedin.com/in/alexanderblack',  title: 'LinkedIn'  },
+{ label: 'GH', href: 'https://github.com/alexanderblack',        title: 'GitHub'    },
+{ label: 'DR', href: 'https://dribbble.com/alexanderblack',       title: 'Dribbble'  },
+{ label: 'IG', href: 'https://instagram.com/alexanderblack',      title: 'Instagram' },
+```
 
-### `npm run build` fails to minify
+Replace each `href` with your own profile URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 🗂️ Projects
+
+Find the three `<ProjectCard />` usages in `App.js` and update:
+
+| Prop | What to change |
+|---|---|
+| `img` | URL or local path to project screenshot |
+| `alt` | Descriptive alt text for the image |
+| `title` | Project name |
+| `category` | Short description (e.g. `Mobile App · React Native`) |
+
+To use a **local image** place it in `public/images/project1.png` and set `img="/images/project1.png"`.
+
+### 🎨 Colours
+
+All colour tokens are CSS custom properties at the top of `src/App.css`:
+
+```css
+:root {
+  --matte-black:   #0B0B0B;
+  --gold-primary:  #FFD700;
+  --gold-dark:     #C9A227;
+  --gold-light:    #FFF3B0;
+  --gold-gradient: linear-gradient(135deg, #FFD700 0%, #C9A227 50%, #FFF3B0 100%);
+}
+```
+
+Change these to restyle the entire site instantly.
+
+### 🔠 Typography
+
+Fonts are loaded in `public/index.html` via Google Fonts:
+
+```html
+<link href="https://fonts.googleapis.com/css2?
+  family=Montserrat:wght@300;400;500;600;700
+  &family=Playfair+Display:ital,wght@0,400;0,700;1,400
+  &display=swap" rel="stylesheet"/>
+```
+
+To use different fonts, change this URL and update `--font-*` references in `App.css`.
+
+---
+
+## 🚢 Deployment
+
+### Netlify (recommended — free)
+1. `npm run build`
+2. Drag the `build/` folder onto [netlify.com/drop](https://app.netlify.com/drop)
+
+### Vercel
+```bash
+npm install -g vercel
+vercel --prod
+```
+
+### GitHub Pages
+```bash
+npm install --save-dev gh-pages
+# Add to package.json → "homepage": "https://YOUR_USERNAME.github.io/portfolio"
+npm run build
+npx gh-pages -d build
+```
+
+---
+
+## 🛠️ Scripts Reference
+
+| Command | Action |
+|---|---|
+| `npm start` | Start dev server at http://localhost:3000 |
+| `npm run build` | Create optimised production build in `build/` |
+| `npm test` | Run tests in watch mode |
+
+---
+
+## 📜 License
+
+MIT — free to use, modify, and distribute. Attribution appreciated but not required.
